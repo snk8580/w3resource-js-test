@@ -4,7 +4,9 @@ import {
   dateFormat,
   findArea,
   rotateString,
-  getKeys
+  getKeys,
+  geyKeysDel,
+  find1stJan
 } from "./functions";
 
 // 1
@@ -23,8 +25,15 @@ document.getElementById("date-format").innerHTML = dateFormat(today);
 document.getElementById("triangle").innerHTML = findArea(5, 6, 7);
 
 //5
-document.getElementById("rotate").innerHTML = rotateString("w3resource");
+
+//6
+
+//7
+document.getElementById("find1stJan").innerHTML = find1stJan();
 
 //1
 var student = { name: "David Rayy", sclass: "VI", rollno: 12 };
 document.getElementById("ob-1").innerHTML = getKeys(student);
+
+////2
+document.getElementById("ob-2").innerHTML = geyKeysDel(student);

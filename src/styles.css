@@ -5,3 +5,11 @@ body {
 div[class^="test"] {
   margin-bottom: 12px;
 }
+
+div[class^="test"] div {
+  color: blue;
+}
+
+div[id^="ob"] {
+  color: blue;
+}
