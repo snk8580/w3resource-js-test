@@ -1,0 +1,7 @@
+body {
+  font-family: sans-serif;
+}
+
+div[class^="test"] {
+  margin-bottom: 12px;
+}
