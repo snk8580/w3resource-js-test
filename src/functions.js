@@ -55,10 +55,53 @@ export function find1stJan() {
   return firstJan;
 }
 
+export function numberMatching(guess) {
+  const randomNumber = Math.round(Math.random() * 10 + 1);
+  return guess === randomNumber ? "Good Work" : "Not matched";
+}
+
+export function nextChristmas() {
+  const today = new Date();
+  const christmasDay = new Date(`12/25/${today.getFullYear()}`);
+  if (today.getMonth() === christmasDay.getMonth()) {
+    if (today.getDate() === christmasDay.getDate()) {
+      return "today is Christmas!!";
+    } else {
+      return Math.abs(today.getDate() - christmasDay.getDate()) + " Days";
+    }
+  } else if (today.getMonth() < christmasDay.getMonth()) {
+    return (
+      Math.abs(today.getMonth() - christmasDay.getMonth()) * 30 -
+      (today.getDate() - christmasDay.getDate()) +
+      " Days"
+    );
+  } else {
+    return (
+      Math.abs(today.getMonth() - christmasDay.getMonth()) * 30 +
+      (today.getDate() - christmasDay.getDate()) +
+      " Days"
+    );
+  }
+}
+
+export function leapYear(year) {
+  return (year % 4 === 0 && year % 100 === 0) || year % 400 === 0;
+}
+
+export function calculate(a, b, action) {}
+
+// object //
+
 export function getKeys(object) {
   return Object.keys(object);
 }
 
 export function geyKeysDel(object) {
   return getKeys(object).filter(k => k !== "rollno");
+}
+
+export function filterBooks(library) {
+  const books = library.filter(book => book.readingStatus);
+  console.log(books);
+  return books;
 }
